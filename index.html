@@ -478,23 +478,26 @@
             </div>
 
             <form class="space-y-6 bg-dark-800/50 p-8 rounded-2xl border border-white/5 backdrop-blur-sm shadow-xl"
-                onsubmit="event.preventDefault();">
+                action="https://formspree.io/f/mlgweokk" method="POST">
+                <!-- Formspree Subject Prefix -->
+                <input type="hidden" name="_subject" value="[Portfolio] 新着お問い合わせ">
+
                 <div>
                     <label for="name" class="block text-sm font-medium text-slate-300 mb-2 font-mono">お名前</label>
-                    <input type="text" id="name"
+                    <input type="text" id="name" name="name" required
                         class="w-full px-4 py-3 rounded-lg bg-dark-900 border border-slate-700 text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none placeholder-slate-600"
                         placeholder="山田 太郎">
                 </div>
                 <div>
                     <label for="email" class="block text-sm font-medium text-slate-300 mb-2 font-mono">メールアドレス</label>
-                    <input type="email" id="email"
+                    <input type="email" id="email" name="email" required
                         class="w-full px-4 py-3 rounded-lg bg-dark-900 border border-slate-700 text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none placeholder-slate-600"
                         placeholder="hello@example.com">
                 </div>
                 <div>
                     <label for="message"
                         class="block text-sm font-medium text-slate-300 mb-2 font-mono">お問い合わせ内容</label>
-                    <textarea id="message" rows="5"
+                    <textarea id="message" name="message" rows="5" required
                         class="w-full px-4 py-3 rounded-lg bg-dark-900 border border-slate-700 text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none placeholder-slate-600"
                         placeholder="お問い合わせ内容をご記入ください..."></textarea>
                 </div>
@@ -516,16 +519,19 @@
                 &copy; 2026 Your Name. All rights reserved.
             </div>
             <div class="flex space-x-6">
-                <!-- Social Icons (Dummy) -->
-                <a href="#" class="text-slate-400 hover:text-white transition-colors">
-                    <span class="sr-only">Twitter</span>
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                <!-- Social Icons -->
+                <a href="https://crowdworks.jp/public/employees/3870516" target="_blank" rel="noopener noreferrer"
+                    class="text-slate-400 hover:text-white transition-colors" title="CrowdWorks">
+                    <span class="sr-only">CrowdWorks</span>
+                    <!-- Briefcase Icon -->
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                         </path>
                     </svg>
                 </a>
-                <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                <a href="https://github.com/circlet" target="_blank" rel="noopener noreferrer"
+                    class="text-slate-400 hover:text-white transition-colors">
                     <span class="sr-only">GitHub</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
